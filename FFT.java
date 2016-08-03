@@ -12,9 +12,9 @@ public class FFT {
 	double syuhasu;// 最終的に求められた周波数
 	double onryou;// 最終的に求められた音量
 
-	// サンプリングレート
+	//TODO サンプリングレート 要調整
 	// 周波数の2倍でサンプリングすれば元を再現可能なので、44.1kHz(44100回/秒)でデータを取るならば、22kHzまではサンプリングできる。
-	int SAMPLING_RATE = 44100;
+	int SAMPLING_RATE = 22000;
 	// FFTのポイント数
 	int FFT_SIZE = 4096;
 

@@ -10,8 +10,9 @@ import javax.sound.sampled.*;
  */
 public class GetSound {
 
-	// リニアPCM 16bit 8000Hz × 1秒間 = 16000byte
-	public static final int byteSize = 16000;
+	// リニアPCM 16bit 2000Hz × 1秒間 = 16000byte
+	//数値を大きくすると録音時間が増える
+	public static final int byteSize = 8000;
 	static byte[] voiceData = new byte[byteSize];
 	static double syuhasu;
 	static double onryou;
@@ -21,7 +22,7 @@ public class GetSound {
 			System.out.println("マイク入力開始...");
 
 			// リニアPCM 8000Hz 16bit モノラル 符号付き リトルエンディアン
-			AudioFormat linearFormat = new AudioFormat(8000, 16, 1, true, false);
+			AudioFormat linearFormat = new AudioFormat(22000, 16, 1, true, false);
 
 			// ターゲットデータラインを取得する
 			DataLine.Info info = new DataLine.Info(TargetDataLine.class,
